@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Desktop Only</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #f0f0f0;
+            text-align: center;
+            padding: 50px;
+            overflow: hidden;
+            position: relative;
+            height: 100vh;
+        }
+
+        h1 {
+            font-size: 32px;
+        }
+
+        .emoji {
+            position: absolute;
+            font-size: 50px;
+            animation: fall 4s linear infinite;
+            opacity: 0;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-100%);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Please use a desktop to view this website</h1>
+    <div class="emoji">❤️</div>
+    <div class="emoji">💓</div>
+    <div class="emoji">💕</div>
+    <div class="emoji">💖</div>
+    <div class="emoji">💗</div>
+    <div class="emoji">💘</div>
+    <div class="emoji">💝</div>
+    <div class="emoji">🌹</div>
+    <div class="emoji">🍫</div>
+    <!-- Add more divs with different emojis -->
+    <script>
+        var emojis = document.querySelectorAll('.emoji');
+        emojis.forEach(function(emoji) {
+            // Randomize the start time and speed
+            var delay = Math.random() * 2;
+            var duration = Math.random() * 3 + 2;
+            emoji.style.animationDelay = '-' + delay + 's';
+            emoji.style.animationDuration = duration + 's';
+            // Randomize the horizontal position
+            var left = Math.random() * 100;
+            emoji.style.left = left + '%';
+        });
+    </script>
+</body>
+</html>
