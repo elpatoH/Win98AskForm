@@ -150,7 +150,7 @@ yesButton.addEventListener('click', function() {
   document.body.innerHTML = '';
   let thanksMessage = document.createElement('div');
   thanksMessage.id = 'thanks-message';
-  thanksMessage.textContent = "See you at 6 🌹";
+  thanksMessage.textContent = "Successfuly set up date at 6🌹";
   thanksMessage.style.zIndex = '1000';
   thanksMessage.style.fontWeight = 'bold';
   document.body.appendChild(thanksMessage);
